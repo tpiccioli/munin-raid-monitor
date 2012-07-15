@@ -72,7 +72,7 @@ if ( $ARGV[0] and $ARGV[0] eq "config" )
 		}
 		else
 		{
-			$rcpt = 0;
+			$rpct = 0;
 		}
 	    }
 	    print "$dev.value $pct\n";
