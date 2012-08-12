@@ -65,7 +65,7 @@ if ( $ARGV[0] and $ARGV[0] eq "config" )
 	    my $rpct = 100;
 	    if ( $pct < 100 )
 	    {
-		my $output = `/sbin/mdadm -D /dev/$dev | grep Rebuild`;
+		my $output = `/sbin/mdadm -D /dev/$dev | grep -E 'Resync|Rebuild'`;
 		if( $output =~ /([0-9]+)% complete/ )
 		{
 			$rpct = $1;
