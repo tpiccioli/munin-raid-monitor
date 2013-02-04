@@ -45,7 +45,7 @@ if ( $ARGV[0] and $ARGV[0] eq "config" )
     my $text = <MDSTAT>;
     close MDSTAT;
 
-    while ($text =~ /(md\d)\s+:\s+active\s+(\w+)\s+(.*)\n.*\[(\d+)\/(\d+)]\s+\[(\w+)]/ )
+    while ($text =~ /(md\d+)\s+:\s+active\s+(\w+)\s+(.*)\n.*\[(\d+)\/(\d+)]\s+\[(\w+)]/ )
     {
 	my($dev,$type,$members,$nmem,$nact,$status) = ($1,$2,$3,$4,$5,$6);
 	#print "item: $dev $type ($members) status=$status \n";
